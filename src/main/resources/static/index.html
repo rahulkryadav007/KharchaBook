@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KharchaBook - Expense Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>KharchaBook</h1>
+            <p>Track your daily expenses easily</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h2>Total Expense</h2>
+                <p id="totalExpense">₹0</p>
+            </div>
+
+            <div class="card">
+                <h2>Total Transactions</h2>
+                <p id="totalTransactions">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Expense -->
+        <section class="expense-form">
+
+            <h2>Add Expense</h2>
+
+            <form id="expenseForm">
+
+                <div class="form-grid">
+
+                    <!-- Title -->
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Expense title"
+                        required
+                    >
+
+                    <!-- Amount -->
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="Amount"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                    <!-- Category -->
+                    <select id="category" required>
+
+                        <option value="">Select Category</option>
+
+                        <option value="FOOD">Food</option>
+
+                        <option value="TRAVEL">Travel</option>
+
+                        <option value="SHOPPING">Shopping</option>
+
+                        <option value="BILL">Bill</option>
+
+                        <option value="HEALTH">Health</option>
+
+                        <option value="EDUCATION">Education</option>
+
+                        <option value="ENTERTAINMENT">Entertainment</option>
+
+                        <option value="OTHER">Other</option>
+
+                    </select>
+
+
+                    <!-- Description -->
+                    <input
+                        type="text"
+                        id="description"
+                        placeholder="Description"
+                    >
+
+
+                    <!-- Date -->
+                    <input
+                        type="date"
+                        id="expenseDate"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit" id="addExpenseBtn">
+                    Add Expense
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Expense List -->
+        <section class="expense-list">
+
+            <div class="section-header">
+
+                <h2>Recent Expenses</h2>
+
+                <button
+                    type="button"
+                    id="refreshBtn"
+                    class="refresh-btn">
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <!-- Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Title</th>
+
+                            <th>Amount</th>
+
+                            <th>Category</th>
+
+                            <th>Description</th>
+
+                            <th>Date</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="expenseTableBody">
+
+                        <!-- JavaScript yahan data add karega -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
